@@ -1,0 +1,48 @@
+body{
+   background-color:#F7DC6F ;
+    padding:10px;
+}
+h1{
+    color:#D4AC0D;
+    font-family:"Lucida Console", Monaco, monospace;
+    font-style:strong;
+    
+}
+h2{
+    margin-left:55px;
+}
+h3  {
+    margin-left:25px;
+}
+table{
+    border-color:#7D6608;
+}
+#addIngredientBtn
+{
+    color: #D4AC0D;
+     
+}
+.controls label {
+    float: center;
+    width: 100%;
+}
+
+
+
+.controls input {
+    float:center;
+    width: 100%;
+}
+button{
+     background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}

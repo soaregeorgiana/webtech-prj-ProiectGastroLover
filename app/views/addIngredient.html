@@ -1,0 +1,26 @@
+ <form name="ingredientForm">
+     <div id="addIngredientContainer">
+   <center> <h2>Adauga un ingredient nou</h2></center>
+                      <div class="loaded_module">
+                          <div class="container-fluid">
+                        <label for="ingr_name">Denumire ingredient</label>
+                        <input type="text" name="ingr_name" id="ingr_name"  ng-model="ingredients.name" class="form-control" required/>
+
+    
+                        <label for="image">Imagine</label>
+                        <input type="text" name="image" id="image" placeholder="adauga url-ul imaginii" ng-model="ingredients.url" class="form-control" required>
+                          
+    
+                        <label for="description">Descriere</label>
+                        <input type="text" name="description" id="image" placeholder="descrie ingredientul t" ng-model="ingredients.description" class="form-control" required>
+    
+                      
+               </div> 
+    <br>
+    <br>
+                      <center>  <button type="button"  class="btn btn-success btn-lg" id="addIngredientBtn" ng-click="newIngredient()" ng-disabled="ingredientForm.$invalid">Add Ingredient</button></center>
+       
+    
+    </div>
+</form>
+   

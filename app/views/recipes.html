@@ -1,0 +1,26 @@
+<html>
+<meta charset="utf-8" />
+    
+<head>
+
+</head>
+
+<body>
+<h3><center><strong>Retete delicioase</center></strong></h3>
+    <div class="container">
+        <table id="tableR" class="table table-bordered pull:center" >
+            <thead>
+                <th>Denumire</th>
+                <th>Dificultate</th>
+            </thead>
+            <tr ng-repeat="r in Recipes" >
+                <td style="margin-left:0">{{r.name}} </td>
+                <td style="margin-left:0">{{r.difficulty}} </td>
+                
+             
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      
+    
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap CSS file-->
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- JS files needed for Angular -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+        <script type="text/javascript" src="https://code.angularjs.org/1.5.6/angular-route.min.js"></script>
+        
+        
+    
+    
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controllers/IngredientsController.js"></script>
+    <script type="text/javascript" src="js/controllers/IngredientController.js"></script>
+    <script type="text/javascript" src="js/controllers/newIngredientController.js"></script>
+    <script type="text/javascript" src="js/controllers/recipesController.js"></script>
+    
+    <title>GastroLover</title>
+    </head>
+ <body>
+  
+<div ng-app="app">
+  
+ <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <h1 class="navbar-brand" href="#"><strong><font color="#D4AC0D">Gastro Lover</font></strong></h1>
+       <div class="container text-center">
+       <img src="pic1.jpg" style="width:180px;height:160px">
+       <img src="pic3.jpg" style="width:180px;height:160px">
+       <img src="pic2.jpg" style="width:180px;height:160px">
+       <img src="pic4.jpg" style="width:180px;height:160px">
+       <img src="pic5.jpg" style="width:180px;height:160px">
+   </div>
+      </div>
+   <!--
+      <ul class="nav navbar-right ">
+        <li> <a ui-sref="Home">Home</a></li>
+        <li> <a ui-sref="Ingredients">Ingredients</a></li>
+        <li> <a ui-sref="Recipes">Recipes</a></li>
+        <li> <a ui-sref="Help">Help</a></li>
+
+      </ul> -->
+      
+     <ul class="nav  navbar-right">
+               <li><a href="#/Home" id="homeBtn"> <font color="#D4AC0D">Home</font></a></li>
+               <li><a href="#/Recipes" id="recipesBtn" ><font color="#D4AC0D">Recipes</font></a></li>
+               <li><a href="#/Help" id="helpBtn" ><font color="#D4AC0D">Help</font></a></li>
+               <li><a href="#/Contact" id="contactBtn" ><font color="#D4AC0D">Contact</font></a></li>
+              
+             </ul> 
+             
+              <ul class="nav navbar-nav navbar-right padding-right:250px">
+              <li><a href="#/Ingredients" id="ingredientsBtn" ><font color="#D4AC0D">Ingredients</font></a></li>
+              <li><a href="#/addIngredient" id="addIngredientBtn" ><font color="#D4AC0D">Add Ingredients</font></a></li>
+             
+               
+              
+             </ul> 
+    </div>
+  
+</nav>
+
+<div ui-view></div>
+
+
+  </div>
+ 
+  </body>
+</html>

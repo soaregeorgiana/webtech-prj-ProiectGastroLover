@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+</head>
+
+<body>
+    <h3>Ai ales ingredientul: {{Ingredient.name}} </h3><br/>
+    <h4>Descriere: {{Ingredient.description}} </h4>
+    <form name="addForm" action="#" class="controls">
+        <center><h3>Adauga o reteta noua care sa contina ingredientul <stong>{{Ingredient.name}} </stong></h3></center>
+        
+     
+        
+        <label for="recipename">Recipe Name:</label>
+        <input type="text" id="recipeInput" name="recipename" placeholder="Recipe Name" ng-model="selectRecipe.name" required minlength="3"> <br/>
+        <label for="recipedifficulty">Difficulty:</label>
+        <input type="text" id="recipeInputDifficulty" placeholder="Difficulty" ng-value="{{selectRecipe}}" name="recipename" ng-model="selectRecipe.difficulty" required minlength="3" /> <br/>
+       
+     
+      <!-- <center> <input type="button" class ="btn btn-success" value="Adauga" ng-click="addRecipe(selectRecipe)" /></center>-->
+      <center> <button type="button" class ="button" value="Adauga" ng-click="addRecipe(selectRecipe)">Adauga</button></center>
+       <br/>
+       
+    </form>
+
+    <table id=tableIngredient class="table">
+        <tr>
+            <th>Nume </th>
+            <th>Dificultate</th>
+        </tr>
+        <tr ng-repeat="link in links" ng-include="getTemplate(link)">
+
+        </tr>
+    </table>
+
+    <script type="text/ng-template" id="display">
+        <td>{{link.Recipe.name}}</td>
+        <td>{{link.Recipe.difficulty}}</td>
+        
+        <td><input type="button" class ="btn btn-danger" value="Delete" ng-click="deleteLink(link)" /></td>
+        <td><input type="button" class ="btn btn-warning" value="Edit" ng-click="editLink(link)" /></td>
+    </script>
+ 
+    <script type="text/ng-template" id="edit">
+        <td><input type="text" ng-model="link.Recipe.name" /></td>
+        <td><input type="text" ng-model="link.Recipe.difficulty" /></td>
+        <td><input type="button"class ="btn btn-danger" value="Cancel" ng-click="cancelEditing()" /></td>
+        <td><input type="button"class ="btn btn-success"value="Save" ng-click="saveLink(link)" /></td>
+        
+    </script>
+
+
+
+</body>
+
+</html>

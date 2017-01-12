@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+    
+<head>
+
+</head>
+
+<body>
+<h3><center><strong>Am ales cele mai sanatoase si delicioase ingrediente pentru tine!</center></strong></h3>
+    <div class="container">
+        <table bgcolor="#FEF9E7" class="table table-hover table-bordered pull:center" >
+            <thead>
+                <th>Imagine</th>
+                <th>Denumire </th>
+                <th>Descriere proprietati</th>
+            </thead>
+            <tr ng-repeat="i in Ingredients" >
+                <td><img src="{{i.url}}" width="100px" heigth="100px"></img>
+                </td>
+                <td style="margin-right:1"><a ui-sref="Ingredient({'id': i.id})">{{i.name}}</a> </td>
+                <td style="margin-left:1">{{i.description}} </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
